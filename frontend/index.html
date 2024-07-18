@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NoteMind</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/app.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <h1 class="logo-heading">NoteMind</h1>
+            <nav>
+                <a  data-page="notes" class="active"><i class="fas fa-sticky-note"></i> Notes</a>
+                <a  data-page="reminders"><i class="fas fa-bell"></i> Reminders</a>
+                <a  data-page="labels"><i class="fas fa-tags"></i> Labels</a>
+                <a  data-page="archive"><i class="fas fa-archive"></i> Archive</a>
+                <a  data-page="trash"><i class="fas fa-trash"></i> Trash</a>
+                <a  data-page="logout"><i class="fas fa-sign-out-alt"></i> Logout</a>
+            </nav>
+        </aside>
+        <main class="content">
+            
+            <div class="note-input">
+                <input type="text" id="note-title" placeholder="Title">
+                <textarea id="note-content" placeholder="Take a note..."></textarea>
+                <input type="text" id="note-tags" placeholder="Tags (comma separated)">
+                <div class="dropdown">
+                    <div id="label-dropdown" class="dropdown-content">
+                    </div>
+                </div>
+                <input type="date" id="due-date" placeholder="Due Date">
+                <div class="color-picker">
+                    <div class="color-option active" data-color="#ffffff" style="background-color: #ffffff;"></div>
+                    <div class="color-option" data-color="#ffeb3b" style="background-color: #ffeb3b;"></div>
+                    <div class="color-option" data-color="#ffcc80" style="background-color: #ffcc80;"></div>
+                    <div class="color-option" data-color="#c8e6c9" style="background-color: #c8e6c9;"></div>
+                    <div class="color-option" data-color="#bbdefb" style="background-color: #bbdefb;"></div>
+                    <div class="color-option" data-color="#d1c4e9" style="background-color: #d1c4e9;"></div>
+                </div>
+                <div class="note-actions">
+                    <button id="add-note">Add Note</button>
+                </div>
+            </div>
+            <div class="header">
+                <input type="text" id="search" placeholder="Search Notes Here">
+            </div>
+            <div class="notes-list" id="notes-list"></div>
+        </main>
+    </div>
+</body>
+</html>
