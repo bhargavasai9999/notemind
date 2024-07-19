@@ -2,7 +2,7 @@
 ##### clone the repository and setup the environment variables with DB_URL,PORT, JWT_SECRET_KEY
 
 Install dependencies:
-- open current project directory terminal
+- open current project directory terminal & cd backend
 - npm install
 - Run express server: 
   npm run start
